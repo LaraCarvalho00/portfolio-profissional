@@ -22,7 +22,7 @@ export default function Experiencias() {
 
   return (
     <div className="max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold text-slate-900 mb-8 border-b-2 border-gray-100 pb-4">
+      <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-b-2 border-gray-100 dark:border-gray-700 pb-4">
         Experiências Profissionais e Acadêmicas
       </h2>
       
@@ -30,17 +30,17 @@ export default function Experiencias() {
         {experiencias.map((exp, index) => (
           <div 
             key={index} 
-            className="bg-white p-6 rounded-xl shadow-sm border-l-4 border-slate-900 hover:shadow-md hover:border-blue-600 transition-all duration-300"
+            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-900/30 border-l-4 border-slate-900 dark:border-blue-500 hover:shadow-md dark:hover:shadow-gray-900/50 hover:border-blue-600 transition-all duration-300"
           >
             <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-              <h3 className="text-2xl font-bold text-slate-800">{exp.cargo}</h3>
-              <span className="text-sm font-bold text-slate-700 bg-gray-100 px-3 py-1 rounded-full w-fit mt-2 md:mt-0">
+              <h3 className="text-2xl font-bold text-slate-800 dark:text-white">{exp.cargo}</h3>
+              <span className="text-sm font-bold text-slate-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full w-fit mt-2 md:mt-0">
                 {exp.periodo}
               </span>
             </div>
             
-            <h4 className="text-lg font-semibold text-blue-600 mb-4">{exp.empresa}</h4>
-            <p className="text-gray-600 leading-relaxed">{exp.descricao}</p>
+            <h4 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-4">{exp.empresa}</h4>
+            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{exp.descricao}</p>
           </div>
         ))}
       </div>
