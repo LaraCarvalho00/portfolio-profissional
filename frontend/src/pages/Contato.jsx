@@ -5,16 +5,34 @@ import { Mail, Linkedin, Github, MessageCircle, MapPin } from 'lucide-react';
 export default function Contato() {
   const form = useRef();
   const [status, setStatus] = useState('');
+  const emailjsConfig = {
+    serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+    templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+  };
+  const isEmailjsConfigured = Object.values(emailjsConfig).every((value) => {
+    if (!value) return false;
+    return !(
+      value.includes('seu_') ||
+      value.includes('service_id_aqui') ||
+      value.includes('template_id_aqui') ||
+      value.includes('public_key_aqui')
+    );
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();
+    if (!isEmailjsConfigured) {
+      setStatus('config');
+      return;
+    }
     setStatus('enviando');
 
     emailjs.sendForm(
-      import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_id_aqui', 
-      import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_id_aqui', 
+      emailjsConfig.serviceId, 
+      emailjsConfig.templateId, 
       form.current, 
-      import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'public_key_aqui'
+      emailjsConfig.publicKey
     )
       .then((result) => {
           console.log(result.text);
@@ -87,12 +105,17 @@ export default function Contato() {
             
             <button 
               type="submit" 
-              disabled={status === 'enviando'}
+              disabled={status === 'enviando' || !isEmailjsConfigured}
               className="w-full bg-slate-900 dark:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300 disabled:bg-gray-400 dark:disabled:bg-gray-600"
             >
               {status === 'enviando' ? 'Enviando...' : 'Enviar Mensagem'}
             </button>
 
+            {status === 'config' && (
+              <p className="text-yellow-600 dark:text-yellow-400 text-sm font-medium text-center mt-2">
+                Configure o EmailJS no <code>.env.local</code> para habilitar o envio.
+              </p>
+            )}
             {status === 'sucesso' && <p className="text-green-600 dark:text-green-400 text-sm font-medium text-center mt-2">Mensagem enviada com sucesso!</p>}
             {status === 'erro' && <p className="text-red-600 dark:text-red-400 text-sm font-medium text-center mt-2">Erro ao enviar. Tente novamente.</p>}
           </form>
