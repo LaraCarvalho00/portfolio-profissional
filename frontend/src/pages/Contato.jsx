@@ -5,6 +5,11 @@ import { Mail, Linkedin, Github, MessageCircle, MapPin } from 'lucide-react';
 export default function Contato() {
   const form = useRef();
   const [status, setStatus] = useState('');
+  const [formValues, setFormValues] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
   const emailjsConfig = {
     serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
     templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
@@ -38,6 +43,7 @@ export default function Contato() {
           console.log(result.text);
           setStatus('sucesso');
           e.target.reset();
+          setFormValues({ name: '', email: '', message: '' });
       }, (error) => {
           console.log(error.text);
           setStatus('erro');
@@ -90,17 +96,44 @@ export default function Contato() {
           <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-6">Envie uma Mensagem</h3>
           
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
+            <input type="hidden" name="user_name" value={formValues.name} />
+            <input type="hidden" name="user_email" value={formValues.email} />
+            <input type="hidden" name="from_email" value={formValues.email} />
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Seu Nome</label>
-              <input type="text" name="user_name" required className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="Lara Carvalho" />
+              <input
+                type="text"
+                name="from_name"
+                required
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                placeholder="Lara Carvalho"
+                value={formValues.name}
+                onChange={(e) => setFormValues((prev) => ({ ...prev, name: e.target.value }))}
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Seu E-mail</label>
-              <input type="email" name="user_email" required className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="seu@email.com" />
+              <input
+                type="email"
+                name="reply_to"
+                required
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                placeholder="seu@email.com"
+                value={formValues.email}
+                onChange={(e) => setFormValues((prev) => ({ ...prev, email: e.target.value }))}
+              />
             </div>
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Mensagem</label>
-              <textarea name="message" required rows="4" className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="Como posso ajudar?"></textarea>
+              <textarea
+                name="message"
+                required
+                rows="4"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                placeholder="Como posso ajudar?"
+                value={formValues.message}
+                onChange={(e) => setFormValues((prev) => ({ ...prev, message: e.target.value }))}
+              ></textarea>
             </div>
             
             <button 
