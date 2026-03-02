@@ -1,7 +1,7 @@
-# 🏷️ Portfólio Profissional - Lara Carvalho 👩‍💻
+# 🏷️ Portfólio Profissional - Allan Mateus 👨‍💻
 
 > [!NOTE]
-> Este projeto é o desenvolvimento do meu portfólio profissional web. Ele consolida minhas experiências atuando como Product Owner com foco em Inteligência Artificial Generativa, meus desenvolvimentos acadêmicos e meus empreendimentos paralelos. O objetivo é criar uma vitrine tecnológica moderna e responsiva que demonstre minha aptidão para atuar na área de tecnologia e dados.
+> Portfólio profissional de um Engenheiro de Software especializado em desenvolvimento backend com Java/Spring Boot e C#/.NET. Este projeto demonstra minhas habilidades técnicas e experiência em sistemas de alta performance e criticidade.
 
 ---
 
@@ -26,20 +26,24 @@
 ---
 
 ## 📝 Sobre o Projeto
-Este projeto foi idealizado inicialmente como requisito acadêmico para o laboratório do curso de Engenharia de Software da PUC-Minas, mas construído com o propósito de se tornar a minha plataforma profissional definitiva. 
 
-Ele resolve a necessidade de centralizar minha trajetória — que transita entre a liderança de produtos (Product Owner), o desenvolvimento focado em IA (Python, IBM Watson, LLMs) e a visão de negócios (como cofundadora da 4 Laços Paperie). O portfólio entrega valor ao apresentar essas habilidades de forma estruturada para recrutadores, parceiros de negócios e a comunidade acadêmica.
+Portfólio profissional desenvolvido para apresentar minha trajetória como **Engenheiro de Software** com foco em:
+
+- **Backend Development:** Java, Spring Boot, C#, .NET
+- **Banco de Dados:** SQL, PLSQL, Oracle, PostgreSQL
+- **Boas Práticas:** SOLID, Design Patterns, Clean Architecture
+- **Metodologias:** Kanban, Scrum, CI/CD
 
 ---
 
 ## ✨ Funcionalidades Principais
 As funcionalidades foram divididas em seções acessíveis por um menu de navegação responsivo:
 
-- 🏠 **Home:** Página inicial com foto de perfil e apresentação profissional.
-- 👩‍💻 **Sobre Mim:** Apresentação bilíngue (Português/Inglês) com foto e detalhes sobre objetivos profissionais e acadêmicos.
-- 🚀 **Projetos:** Linha do tempo dinâmica apresentando projetos acadêmicos, de negócios e de tecnologia, com links para repositórios.
-- 💼 **Experiências:** Histórico profissional organizado, destacando atuações em Inteligência Artificial e empreendedorismo.
-- 📨 **Contato:** Integração de formulário funcional (via EmailJS) e links rápidos para LinkedIn, GitHub e WhatsApp.
+- 🏠 **Home:** Apresentação profissional com headline e call-to-action.
+- 👨‍💻 **Sobre Mim:** Bio bilíngue (Português/Inglês) com competências técnicas detalhadas.
+- 🚀 **Projetos:** Portfólio de projetos com tecnologias utilizadas e links para repositórios.
+- 💼 **Experiências:** Histórico profissional detalhado (dti digital, Prodemge, Líder Aviação).
+- 📨 **Contato:** Integração de formulário funcional (via EmailJS) e links rápidos para LinkedIn e GitHub.
 - 🌙 **Tema Automático:** Detecção automática do tema do sistema (dark/light) com opção de alternância manual.
 
 ---
@@ -207,6 +211,8 @@ portfolio-profissional/
 │   │           └── application.properties
 │   ├── pom.xml
 │   └── mvnw / mvnw.cmd
+├── docs/
+│   └── screenshots
 └── README.md
 ```
 
@@ -234,7 +240,7 @@ portfolio-profissional/
 
 | Foto | Nome | Contato |
 |------|------|---------|
-| <img src="https://avatars.githubusercontent.com/u/placeholder" width="100"> | **Lara Andrade Carvalho** | [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/seu-perfil) [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/LaraCarvalho00) |
+| <img src="https://avatars.githubusercontent.com/allanmateusk" width="100"> | **Allan Mateus** | [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/allan-mateus/) [![GitHub](https://img.shields.io/badge/-GitHub-black?style=flat-square&logo=github)](https://github.com/allanmateusk) [![Email](https://img.shields.io/badge/-Email-red?style=flat-square&logo=gmail)](mailto:allanmateusk@gmail.com) |
 
 ---
 

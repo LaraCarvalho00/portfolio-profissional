@@ -1,46 +1,113 @@
+import { Briefcase, Building2, GraduationCap } from 'lucide-react';
+
 export default function Experiencias() {
   const experiencias = [
     {
-      empresa: "Atuação em Produto & IA Generativa",
-      cargo: "Product Owner / Especialista em IA",
-      periodo: "Atualmente",
-      descricao: "Liderança de produtos com foco em Inteligência Artificial Generativa. Desenvolvimento ativo na plataforma IBM Watson, análise de dados conversacionais utilizando Python e exploração prática de Large Language Models (LLMs). Condução de projetos estratégicos focados em precificação, market insights e roadmap de novas funcionalidades de IA, como os projetos 'Mapa de Calor' e 'Estranho no Ninho'."
+      empresa: "dti digital",
+      cargo: "Desenvolvedor",
+      periodo: "Maio 2025 - Atual",
+      descricao: "Atuação como desenvolvedor backend em squads ágeis, focado na entrega de soluções de alto impacto para a Ânima Educação.",
+      responsabilidades: [
+        "Desenvolvimento e evolução de sistemas utilizando Java e Spring Boot",
+        "Participação em projetos estratégicos para um dos maiores grupos educacionais do país",
+        "Garantia de escalabilidade e performance das aplicações",
+        "Aplicação de metodologias ágeis (Kanban) para otimização do fluxo de entrega"
+      ],
+      icone: <Building2 size={24} className="text-white" />,
+      cor: "bg-blue-600"
     },
     {
-      empresa: "4 Laços Paperie",
-      cargo: "Co-fundadora & Estrategista de Negócios",
-      periodo: "Jan 2026 - Presente",
-      descricao: "Gestão estratégica, estruturação de e-commerce e alinhamento de vendas multiplataforma (Shopee, Mercado Livre e TikTok Shop) para uma loja online de papelaria criativa. Responsável direta pela criação do plano de negócios e pela identidade visual da marca."
+      empresa: "Prodemge",
+      cargo: "Software Developer",
+      periodo: "2023 - 2025",
+      descricao: "Atuação no desenvolvimento e sustentação do projeto GRP-receita, um sistema de gestão de receitas públicas de larga escala.",
+      responsabilidades: [
+        "Desenvolvimento backend utilizando Java com foco no ecossistema JSF (PrimeFaces, RichFaces)",
+        "Implementação e manutenção de relatórios complexos utilizando Jaspersoft",
+        "Melhoria contínua de sistemas legados",
+        "Implementação de novas funcionalidades de alta criticidade"
+      ],
+      icone: <Building2 size={24} className="text-white" />,
+      cor: "bg-blue-600"
     },
     {
-      empresa: "Pontifícia Universidade Católica (PUC-Minas)",
-      cargo: "Graduação em Engenharia de Software",
-      periodo: "Fev 2023 - Dez 2026",
-      descricao: "Formação acadêmica focada no ciclo completo de desenvolvimento de software, arquitetura de sistemas e metodologias ágeis. Atualmente em fase de desenvolvimento do Trabalho de Conclusão de Curso (TCC) aplicando normas ABNT e metodologias de pesquisa."
+      empresa: "Líder Aviação",
+      cargo: "Estagiário de Desenvolvimento",
+      periodo: "Junho 2023 - Novembro 2023",
+      descricao: "Suporte ao ciclo de vida de desenvolvimento de software da companhia.",
+      responsabilidades: [
+        "Manutenção e desenvolvimento de sistemas utilizando C# e .NET",
+        "Escrita de queries complexas e manipulação de dados via PLSQL",
+        "Desenvolvimento de funcionalidades front-end com JavaScript"
+      ],
+      icone: <Briefcase size={24} className="text-white" />,
+      cor: "bg-slate-600"
+    },
+    {
+      empresa: "Prodemge",
+      cargo: "Estagiário",
+      periodo: "Janeiro 2023 - Junho 2023",
+      descricao: "Atuação na área de infraestrutura, focado na gestão de Data Center.",
+      responsabilidades: [
+        "Gestão e monitoramento de Data Center",
+        "Suporte à infraestrutura de TI"
+      ],
+      icone: <Briefcase size={24} className="text-white" />,
+      cor: "bg-slate-600"
+    },
+    {
+      empresa: "PUC Minas",
+      cargo: "Bacharelado em Engenharia de Software",
+      periodo: "2022 - 2026",
+      descricao: "Formação acadêmica focada no ciclo completo de desenvolvimento de software, arquitetura de sistemas e metodologias ágeis.",
+      responsabilidades: [],
+      icone: <GraduationCap size={24} className="text-white" />,
+      cor: "bg-green-600"
     }
   ];
 
   return (
     <div className="max-w-4xl mx-auto">
-      <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 border-b-2 border-gray-100 dark:border-gray-700 pb-4">
-        Experiências Profissionais e Acadêmicas
+      <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
+        Experiências
       </h2>
       
-      <div className="space-y-8">
+      <div className="space-y-6">
         {experiencias.map((exp, index) => (
           <div 
             key={index} 
-            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-900/30 border-l-4 border-slate-900 dark:border-blue-500 hover:shadow-md dark:hover:shadow-gray-900/50 hover:border-blue-600 transition-all duration-300"
+            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-900/30 transition-all duration-300 hover:shadow-md"
           >
-            <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-2">
-              <h3 className="text-2xl font-bold text-slate-800 dark:text-white">{exp.cargo}</h3>
-              <span className="text-sm font-bold text-slate-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-700 px-3 py-1 rounded-full w-fit mt-2 md:mt-0">
-                {exp.periodo}
-              </span>
+            <div className="flex gap-4">
+              <div className={`${exp.cor} w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0`}>
+                {exp.icone}
+              </div>
+              
+              <div className="flex-1">
+                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                  <div>
+                    <h3 className="text-xl font-bold text-slate-800 dark:text-white">{exp.cargo}</h3>
+                    <p className="text-blue-600 dark:text-blue-400 font-semibold">{exp.empresa}</p>
+                  </div>
+                  <span className="text-sm font-medium text-gray-500 dark:text-gray-400 mt-1 md:mt-0">
+                    {exp.periodo}
+                  </span>
+                </div>
+                
+                <p className="text-gray-600 dark:text-gray-300 mb-3">{exp.descricao}</p>
+                
+                {exp.responsabilidades.length > 0 && (
+                  <ul className="space-y-1">
+                    {exp.responsabilidades.map((resp, i) => (
+                      <li key={i} className="text-gray-600 dark:text-gray-300 flex items-start gap-2">
+                        <span className="text-blue-600 mt-1">•</span>
+                        {resp}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </div>
-            
-            <h4 className="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-4">{exp.empresa}</h4>
-            <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{exp.descricao}</p>
           </div>
         ))}
       </div>
