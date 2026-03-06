@@ -13,15 +13,14 @@ export default function Home() {
           <img 
             src={PROFILE_PHOTO} 
             alt="Allan" 
-            className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-blue-600 shadow-lg"
+            className="photo-hover w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-blue-600 shadow-lg"
           />
         ) : (
-          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 border-4 border-blue-600 shadow-lg flex items-center justify-center">
+          <div className="photo-hover w-40 h-40 md:w-48 md:h-48 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 border-4 border-blue-600 shadow-lg flex items-center justify-center">
             <User size={80} className="text-white/80" />
           </div>
         )}
       </div>
-
       <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
         Engenheiro de Software
       </h1>

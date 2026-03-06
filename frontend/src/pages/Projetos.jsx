@@ -42,7 +42,7 @@ export default function Projetos() {
         {projetos.map((proj, index) => (
           <div 
             key={index} 
-            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-900/30 hover:shadow-md transition-all duration-300"
+            className="hover-zoom bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-900/30 hover:shadow-md transition-all duration-300"
           >
             <div className="flex gap-4">
               <div className="bg-blue-100 dark:bg-blue-900/50 w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
@@ -70,13 +70,7 @@ export default function Projetos() {
                   ))}
                 </div>
                 
-                <a 
-                  href={proj.link} 
-                  className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold hover:underline"
-                >
-                  <ExternalLink size={16} />
-                  Ver no GitHub
-                </a>
+                <span className="sr-only">Projeto sem link público</span>
               </div>
             </div>
           </div>

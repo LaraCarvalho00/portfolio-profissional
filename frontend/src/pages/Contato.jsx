@@ -48,7 +48,7 @@ export default function Contato() {
               href="https://www.linkedin.com/in/allan-mateus/" 
               target="_blank" 
               rel="noreferrer" 
-              className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+              className="hover-zoom flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
             >
               <div className="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full">
                 <Linkedin size={24} className="text-blue-600 dark:text-blue-400"/>
@@ -60,7 +60,7 @@ export default function Contato() {
               href="https://github.com/allanmateusk" 
               target="_blank" 
               rel="noreferrer" 
-              className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+              className="hover-zoom flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
             >
               <div className="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full">
                 <Github size={24} className="text-blue-600 dark:text-blue-400"/>
@@ -70,7 +70,7 @@ export default function Contato() {
             
             <a 
               href="mailto:allanmateusk@gmail.com" 
-              className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+              className="hover-zoom flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-all text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
             >
               <div className="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full">
                 <Mail size={24} className="text-blue-600 dark:text-blue-400"/>
@@ -78,7 +78,7 @@ export default function Contato() {
               <span className="font-medium">allanmateusk@gmail.com</span>
             </a>
             
-            <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm text-gray-700 dark:text-gray-300">
+            <div className="hover-zoom flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm text-gray-700 dark:text-gray-300">
               <div className="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full">
                 <MapPin size={24} className="text-blue-600 dark:text-blue-400"/>
               </div>
@@ -88,7 +88,7 @@ export default function Contato() {
         </div>
 
         {/* Coluna da Direita: Formulário */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-900/30">
+        <div className="hover-zoom bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-900/30">
           <form ref={form} onSubmit={sendEmail} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Nome</label>
@@ -130,12 +130,12 @@ export default function Contato() {
             </button>
 
             {status === 'sucesso' && (
-              <p className="text-green-600 dark:text-green-400 text-sm font-medium text-center">
+              <p className="status-pop text-green-600 dark:text-green-400 text-sm font-medium text-center">
                 Mensagem enviada com sucesso!
               </p>
             )}
             {status === 'erro' && (
-              <p className="text-red-600 dark:text-red-400 text-sm font-medium text-center">
+              <p className="status-pop text-red-600 dark:text-red-400 text-sm font-medium text-center">
                 Erro ao enviar. Verifique as configurações do EmailJS.
               </p>
             )}

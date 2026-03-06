@@ -41,44 +41,44 @@ export default function Sobre() {
             <img 
               src={PROFILE_PHOTO} 
               alt="Allan" 
-              className="w-32 h-32 rounded-full object-cover border-4 border-blue-600 shadow-lg flex-shrink-0"
+              className="photo-hover w-32 h-32 rounded-full object-cover border-4 border-blue-600 shadow-lg flex-shrink-0"
             />
           ) : (
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 border-4 border-blue-600 shadow-lg flex items-center justify-center flex-shrink-0">
+            <div className="photo-hover w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 border-4 border-blue-600 shadow-lg flex items-center justify-center flex-shrink-0">
               <User size={64} className="text-white/80" />
             </div>
           )}
-          
+
           <div className="text-center md:text-left">
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Sobre Mim</h2>
-            
-            {idioma === 'pt' ? (
-              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-                <p>
-                  Engenheiro de software com mais de <strong>3 anos de experiência sólida</strong> em desenvolvimento backend, 
-                  com foco nas stacks <strong>Java</strong> e <strong>.NET</strong>.
-                </p>
-                <p>
-                  Minha trajetória é marcada pela atuação em sistemas de <strong>alta performance e criticidade</strong>, 
-                  onde aplico boas práticas de arquitetura de software, princípios <strong>SOLID</strong> e <strong>Design Patterns</strong> para 
-                  entregar soluções escaláveis. Tenho experiência no desenvolvimento de <strong>APIs RESTful</strong> e 
-                  integração com bancos de dados relacionais complexos.
-                </p>
-              </div>
-            ) : (
-              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
-                <p>
-                  Software engineer with over <strong>3 years of solid experience</strong> in backend development, 
-                  focusing on <strong>Java</strong> and <strong>.NET</strong> stacks.
-                </p>
-                <p>
-                  My career is marked by working on <strong>high-performance and mission-critical systems</strong>, 
-                  where I apply software architecture best practices, <strong>SOLID principles</strong>, and <strong>Design Patterns</strong> to 
-                  deliver scalable solutions. I have experience in developing <strong>RESTful APIs</strong> and 
-                  integration with complex relational databases.
-                </p>
-              </div>
-            )}
+          <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Sobre Mim</h2>
+          
+          {idioma === 'pt' ? (
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p>
+                Engenheiro de software com mais de <strong>3 anos de experiência sólida</strong> em desenvolvimento backend, 
+                com foco nas stacks <strong>Java</strong> e <strong>.NET</strong>.
+              </p>
+              <p>
+                Minha trajetória é marcada pela atuação em sistemas de <strong>alta performance e criticidade</strong>, 
+                onde aplico boas práticas de arquitetura de software, princípios <strong>SOLID</strong> e <strong>Design Patterns</strong> para 
+                entregar soluções escaláveis. Tenho experiência no desenvolvimento de <strong>APIs RESTful</strong> e 
+                integração com bancos de dados relacionais complexos.
+              </p>
+            </div>
+          ) : (
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+              <p>
+                Software engineer with over <strong>3 years of solid experience</strong> in backend development, 
+                focusing on <strong>Java</strong> and <strong>.NET</strong> stacks.
+              </p>
+              <p>
+                My career is marked by working on <strong>high-performance and mission-critical systems</strong>, 
+                where I apply software architecture best practices, <strong>SOLID principles</strong>, and <strong>Design Patterns</strong> to 
+                deliver scalable solutions. I have experience in developing <strong>RESTful APIs</strong> and 
+                integration with complex relational databases.
+              </p>
+            </div>
+          )}
           </div>
         </div>
 

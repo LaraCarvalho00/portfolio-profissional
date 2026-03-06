@@ -76,7 +76,7 @@ export default function Experiencias() {
         {experiencias.map((exp, index) => (
           <div 
             key={index} 
-            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-900/30 transition-all duration-300 hover:shadow-md"
+            className="hover-zoom bg-white dark:bg-gray-800 p-6 rounded-xl shadow-sm dark:shadow-gray-900/30 transition-all duration-300 hover:shadow-md"
           >
             <div className="flex gap-4">
               <div className={`${exp.cor} w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0`}>
