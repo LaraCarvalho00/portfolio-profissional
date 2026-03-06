@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { User } from 'lucide-react';
+import PROFILE_PHOTO from '../assets/perfil.png';
 
-const PROFILE_PHOTO = null;
 
 export default function Sobre() {
   const [idioma, setIdioma] = useState('pt');
 
   return (
-    <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm dark:shadow-gray-900/30 border-t-4 border-blue-600 transition-colors">
+    <div className="max-w-4xl mx-auto bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm dark:shadow-gray-900/30 border-t-4 border-violet-600 transition-colors">
       <div className="flex justify-between items-center mb-8">
         <h2 className="text-3xl font-bold text-slate-900 dark:text-white">Sobre Mim</h2>
         <div className="flex gap-2">
-          <button onClick={() => setIdioma('pt')} className={`px-4 py-1 rounded font-bold transition-colors ${idioma === 'pt' ? 'bg-slate-900 dark:bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}`}>PT</button>
-          <button onClick={() => setIdioma('en')} className={`px-4 py-1 rounded font-bold transition-colors ${idioma === 'en' ? 'bg-slate-900 dark:bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}`}>EN</button>
+          <button onClick={() => setIdioma('pt')} className={`px-4 py-1 rounded font-bold transition-colors ${idioma === 'pt' ? 'bg-slate-900 dark:bg-violet-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}`}>PT</button>
+          <button onClick={() => setIdioma('en')} className={`px-4 py-1 rounded font-bold transition-colors ${idioma === 'en' ? 'bg-slate-900 dark:bg-violet-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'}`}>EN</button>
         </div>
       </div>
 
@@ -22,10 +22,10 @@ export default function Sobre() {
           <img 
             src={PROFILE_PHOTO} 
             alt="Lara Carvalho" 
-            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-600 shadow-lg flex-shrink-0"
+            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-violet-600 shadow-lg flex-shrink-0"
           />
         ) : (
-          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 border-4 border-blue-600 shadow-lg flex items-center justify-center flex-shrink-0">
+          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-violet-500 to-violet-700 border-4 border-violet-600 shadow-lg flex items-center justify-center flex-shrink-0">
             <User size={64} className="text-white/80" />
           </div>
         )}

@@ -56,7 +56,7 @@ export default function Contato() {
         Vamos Conversar?
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm dark:shadow-gray-900/30 border-t-4 border-slate-900 dark:border-blue-500 transition-colors">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-sm dark:shadow-gray-900/30 border-t-4 border-slate-900 dark:border-violet-500 transition-colors">
         
         {/* Coluna da Esquerda: Informações e Ícones */}
         <div className="space-y-8">
@@ -68,24 +68,24 @@ export default function Contato() {
           </div>
 
           <div className="space-y-4">
-            <a href="mailto:lara.carvalho@email.com" className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
-              <div className="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full"><Mail size={24} className="text-blue-600 dark:text-blue-400"/></div>
+            <a href="mailto:lara.carvalho@email.com" className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition">
+              <div className="bg-violet-100 dark:bg-violet-900/50 p-3 rounded-full"><Mail size={24} className="text-violet-600 dark:text-violet-400"/></div>
               <span className="font-medium">lara.carvalho@email.com</span>
             </a>
-            <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
-              <div className="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full"><Linkedin size={24} className="text-blue-600 dark:text-blue-400"/></div>
+            <a href="https://linkedin.com/in/seu-perfil" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition">
+              <div className="bg-violet-100 dark:bg-violet-900/50 p-3 rounded-full"><Linkedin size={24} className="text-violet-600 dark:text-violet-400"/></div>
               <span className="font-medium">LinkedIn Profile</span>
             </a>
-            <a href="https://github.com/LaraCarvalho00" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
-              <div className="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full"><Github size={24} className="text-blue-600 dark:text-blue-400"/></div>
+            <a href="https://github.com/LaraCarvalho00" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition">
+              <div className="bg-violet-100 dark:bg-violet-900/50 p-3 rounded-full"><Github size={24} className="text-violet-600 dark:text-violet-400"/></div>
               <span className="font-medium">GitHub /LaraCarvalho00</span>
             </a>
-            <a href="https://wa.me/5531999999999" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition">
-              <div className="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full"><MessageCircle size={24} className="text-blue-600 dark:text-blue-400"/></div>
+            <a href="https://wa.me/5531999999999" target="_blank" rel="noreferrer" className="flex items-center gap-4 text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition">
+              <div className="bg-violet-100 dark:bg-violet-900/50 p-3 rounded-full"><MessageCircle size={24} className="text-violet-600 dark:text-violet-400"/></div>
               <span className="font-medium">WhatsApp</span>
             </a>
             <div className="flex items-center gap-4 text-gray-700 dark:text-gray-300">
-              <div className="bg-blue-100 dark:bg-blue-900/50 p-3 rounded-full"><MapPin size={24} className="text-blue-600 dark:text-blue-400"/></div>
+              <div className="bg-violet-100 dark:bg-violet-900/50 p-3 rounded-full"><MapPin size={24} className="text-violet-600 dark:text-violet-400"/></div>
               <span className="font-medium">Belo Horizonte, MG</span>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function Contato() {
                 type="text"
                 name="from_name"
                 required
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-violet-600 focus:border-transparent outline-none transition"
                 placeholder="Lara Carvalho"
                 value={formValues.name}
                 onChange={(e) => setFormValues((prev) => ({ ...prev, name: e.target.value }))}
@@ -117,7 +117,7 @@ export default function Contato() {
                 type="email"
                 name="reply_to"
                 required
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-violet-600 focus:border-transparent outline-none transition"
                 placeholder="seu@email.com"
                 value={formValues.email}
                 onChange={(e) => setFormValues((prev) => ({ ...prev, email: e.target.value }))}
@@ -129,7 +129,7 @@ export default function Contato() {
                 name="message"
                 required
                 rows="4"
-                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition"
+                className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:ring-2 focus:ring-violet-600 focus:border-transparent outline-none transition"
                 placeholder="Como posso ajudar?"
                 value={formValues.message}
                 onChange={(e) => setFormValues((prev) => ({ ...prev, message: e.target.value }))}
@@ -139,7 +139,7 @@ export default function Contato() {
             <button 
               type="submit" 
               disabled={status === 'enviando' || !isEmailjsConfigured}
-              className="w-full bg-slate-900 dark:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300 disabled:bg-gray-400 dark:disabled:bg-gray-600"
+              className="w-full bg-slate-900 dark:bg-violet-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-violet-700 dark:hover:bg-violet-500 transition duration-300 disabled:bg-gray-400 dark:disabled:bg-gray-600"
             >
               {status === 'enviando' ? 'Enviando...' : 'Enviar Mensagem'}
             </button>

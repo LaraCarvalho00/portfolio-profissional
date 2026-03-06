@@ -54,11 +54,11 @@ function App() {
             <h1 className="text-2xl font-bold tracking-widest">LARA CARVALHO</h1>
             <div className="flex items-center gap-6">
               <ul className="flex gap-4 sm:gap-6 font-medium text-sm sm:text-base">
-                <li><Link to="/" className="hover:text-blue-400 transition-colors">Home</Link></li>
-                <li><Link to="/sobre" className="hover:text-blue-400 transition-colors">Sobre Mim</Link></li>
-                <li><Link to="/projetos" className="hover:text-blue-400 transition-colors">Projetos</Link></li>
-                <li><Link to="/experiencias" className="hover:text-blue-400 transition-colors">Experiências</Link></li>
-                <li><Link to="/contato" className="hover:text-blue-400 transition-colors">Contato</Link></li>
+                <li><Link to="/" className="hover:text-violet-400 transition-colors">Home</Link></li>
+                <li><Link to="/sobre" className="hover:text-violet-400 transition-colors">Sobre Mim</Link></li>
+                <li><Link to="/projetos" className="hover:text-violet-400 transition-colors">Projetos</Link></li>
+                <li><Link to="/experiencias" className="hover:text-violet-400 transition-colors">Experiências</Link></li>
+                <li><Link to="/contato" className="hover:text-violet-400 transition-colors">Contato</Link></li>
               </ul>
               <button 
                 onClick={toggleTheme}
